@@ -12,3 +12,13 @@ variable "key_pair_name" {
 variable "eks_node_instance_type" {
   default = "t2.medium"
 }
+
+variable "environment" {
+  description = "The environment name (e.g., dev, staging, prod)"
+  type        = string
+}
+
+variable "profile" {
+  description = "AWS CLI profile"
+  type        = string
+}
