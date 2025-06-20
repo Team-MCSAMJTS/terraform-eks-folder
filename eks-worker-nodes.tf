@@ -5,7 +5,7 @@
 #
 
 resource "aws_iam_role" "tsp-cluster-node" {
-  name = "tsp-cluster-node"
+  name = "tsp-cluster-node-${terraform.workspace}"  //add tag
 
   assume_role_policy = <<POLICY
 {

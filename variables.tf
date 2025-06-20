@@ -3,14 +3,15 @@
 #
 
 variable "cluster-name" {
-  default = "tsp-cluster"
+  description = "EKS cluster name"  //added description
+  default = ""                      //removed "" declaration
   type    = string
 }
 variable "key_pair_name" {
   default = "tspcloud"
 }
 variable "eks_node_instance_type" {
-  default = "t2.medium"
+  default = "t2.micro"
 }
 
 variable "environment" {
