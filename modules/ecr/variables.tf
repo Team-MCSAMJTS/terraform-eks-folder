@@ -1,23 +1,24 @@
 variable "ecr_name" {
-  description = "Set of ECR repository names"
-  type        = set(string)
-  default     = []
+  description = "The name of the ECR registry"
+  type        = any
+  default     = null
 }
 
 variable "image_mutability" {
-  description = "Image tag mutability setting"
+  description = "Provide image mutability"
   type        = string
   default     = "IMMUTABLE"
 }
 
+
 variable "encrypt_type" {
-  description = "Encryption type for ECR"
+  description = "Provide type of encryption here"
   type        = string
   default     = "KMS"
 }
 
 variable "tags" {
-  description = "Tags for the ECR repositories"
+  description = "The key-value maps for tagging"
   type        = map(string)
   default     = {}
 }

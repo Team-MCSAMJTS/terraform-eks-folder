@@ -3,7 +3,7 @@ tags = {
 }
 
 ecr_name = [
-  "demoapp/frontendservice"
+  "fashion-app-images"
 ]
 
 image_mutability = "IMMUTABLE"
