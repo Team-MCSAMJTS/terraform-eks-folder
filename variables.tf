@@ -23,3 +23,14 @@ variable "profile" {
   description = "AWS CLI profile"
   type        = string
 }
+
+# argocd
+
+variable "eks-name" {
+  type    = string
+  default = "my-cluster"
+}
+
+variable "env" {
+  default = "staging"
+}
