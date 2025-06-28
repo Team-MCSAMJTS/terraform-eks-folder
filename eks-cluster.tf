@@ -75,9 +75,3 @@ resource "aws_eks_cluster" "tsp-cluster" {
     aws_iam_role_policy_attachment.tsp-cluster-AmazonEKSServicePolicy,
   ]
 }
-
-#for argocd
-module "argocd" {
-  source = "./argocd"
-  env    = var.env
-}
