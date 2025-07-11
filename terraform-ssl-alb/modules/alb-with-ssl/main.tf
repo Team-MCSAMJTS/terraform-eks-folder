@@ -25,26 +25,11 @@ resource "aws_route53_record" "cert_validation" {
 
 resource "aws_acm_certificate_validation" "this" {
   certificate_arn         = aws_acm_certificate.this.arn
-  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
-}
-
-resource "aws_lb" "this" {
-  name               = "ssl-alb"
-  internal           = false
-  load_balancer_type = "application"
-  security_groups    = []
-  subnets            = var.public_subnets
-}
-
-resource "aws_lb_target_group" "this" {
-  name     = "alb-tg"
-  port     = 80
-  protocol = "HTTP"
-  vpc_id   = var.vpc_id
+  validation_record_fqdns = [for r in aws_route53_record.cert_validation : r.fqdn]
 }
 
 resource "aws_lb_listener" "https" {
-  load_balancer_arn = aws_lb.this.arn
+  load_balancer_arn = var.alb_arn
   port              = 443
   protocol          = "HTTPS"
   ssl_policy        = "ELBSecurityPolicy-2016-08"
@@ -52,7 +37,7 @@ resource "aws_lb_listener" "https" {
 
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.this.arn
+    target_group_arn = var.target_group_arn
   }
 }
 
@@ -62,8 +47,8 @@ resource "aws_route53_record" "alb_dns" {
   type    = "A"
 
   alias {
-    name                   = aws_lb.this.dns_name
-    zone_id                = aws_lb.this.zone_id
+    name                   = var.alb_dns_name
+    zone_id                = var.alb_zone_id
     evaluate_target_health = true
   }
 }

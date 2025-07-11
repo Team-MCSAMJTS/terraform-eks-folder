@@ -1,9 +1,10 @@
-module "alb_ssl" {
-  source = "./modules/alb_with_ssl"
+module "ssl_listener" {
+  source = "./modules/ssl_listener"
 
-  domain_name     = var.domain_name
-  hosted_zone_id  = var.hosted_zone_id
-  vpc_id          = var.vpc_id
-  public_subnets  = var.public_subnets
-  profile         = var.profile
+  domain_name        = var.domain_name
+  hosted_zone_id     = var.hosted_zone_id
+  alb_arn            = var.alb_arn
+  alb_zone_id        = var.alb_zone_id
+  alb_dns_name       = var.alb_dns_name
+  target_group_arn   = var.target_group_arn
 }
