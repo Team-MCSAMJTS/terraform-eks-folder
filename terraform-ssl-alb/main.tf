@@ -1,10 +1,10 @@
-module "ssl_listener" {
-  source = "./modules/ssl_listener"
-
-  domain_name        = var.domain_name
-  hosted_zone_id     = var.hosted_zone_id
-  alb_arn            = var.alb_arn
-  alb_zone_id        = var.alb_zone_id
-  alb_dns_name       = var.alb_dns_name
-  target_group_arn   = var.target_group_arn
+module "ssl_cert" {
+  source         = "./modules/ssl_cert_dns_record"
+  domain_name    = "your.domain.com"
+  hosted_zone_id = "Z123456ABCEXAMPLE"
+  elb_name       = "your-elb-name"
+  tags = {
+    Environment = "dev"
+    Owner       = "Oluwaseun"
+  }
 }
