@@ -121,6 +121,30 @@ spec:
 #     port: 80
 #     targetPort: 8080
 ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: frontend-external
+#   labels:
+#     app: frontend
+#   annotations:
+#     service.beta.kubernetes.io/aws-load-balancer-healthcheck-path: /
+#     external-dns.alpha.kubernetes.io/hostname: dev.oluwaseunalade.com # Replace with your domain
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     app: frontend
+#   ports:
+#     - name: http
+#       protocol: TCP
+#       port: 80
+#       targetPort: 8080
+# ---
+# apiVersion: v1
+# kind: ServiceAccount
+# metadata:
+#   name: frontend
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -129,12 +153,18 @@ metadata:
     app: frontend
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-path: /
-    external-dns.alpha.kubernetes.io/hostname: dev.oluwaseunalade.com # Replace with your domain
+    external-dns.alpha.kubernetes.io/hostname: dev.oluwaseunalade.com
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ca-central-1:050752609092:certificate/9457b138-6fe0-4c7b-8c4e-92712a436ff5
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
 spec:
   type: LoadBalancer
   selector:
     app: frontend
   ports:
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 8080
     - name: http
       protocol: TCP
       port: 80
@@ -144,3 +174,4 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: frontend
+
