@@ -154,7 +154,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-path: /
     external-dns.alpha.kubernetes.io/hostname: dev.oluwaseunalade.com
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ca-central-1:050752609092:certificate/9457b138-6fe0-4c7b-8c4e-92712a436ff5
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ca-central-1:050752609092:certificate/d9a2105c-56bf-4b48-974c-7f627196ebc2 # Replace with your ACM certificate ARN
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
 spec:
   type: LoadBalancer
