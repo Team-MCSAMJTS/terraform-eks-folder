@@ -1,29 +1,44 @@
 variable "domain_name" {
-  description = "Subdomain to generate certificate for (e.g., argocd.oluwaseunalade.com)"
+  description = "The full domain name to secure"
   type        = string
 }
 
 variable "hosted_zone_id" {
-  description = "Route53 hosted zone ID"
-  type        = string
-}
-
-variable "environment" {
-  description = "Environment tag (dev, staging, prod)"
+  description = "The ID of the Route53 hosted zone"
   type        = string
 }
 
 variable "elb_name" {
-  description = "Name of the existing Classic Load Balancer"
+  description = "Name of the Classic ELB"
   type        = string
 }
 
 variable "elb_dns_name" {
-  description = "DNS name of the existing ELB"
+  description = "DNS name of the ELB for Route53 alias"
   type        = string
 }
 
 variable "elb_zone_id" {
-  description = "Zone ID of the existing ELB (used for alias)"
+  description = "Canonical hosted zone ID of the ELB"
   type        = string
+}
+
+variable "environment" {
+  description = "Deployment environment (e.g. dev, staging, prod)"
+  type        = string
+}
+
+variable "availability_zones" {
+  description = "List of availability zones to use for the ELB"
+  type        = list(string)
+}
+
+variable "security_groups" {
+  description = "List of security group IDs to associate with the ELB"
+  type        = list(string)
+}
+
+variable "subnet_ids" {
+  description = "List of subnet IDs for the ELB"
+  type        = list(string)
 }

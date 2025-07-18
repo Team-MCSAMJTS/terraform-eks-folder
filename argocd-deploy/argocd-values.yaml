@@ -1,3 +1,15 @@
- server:
-   service:
-     type: LoadBalancer
+#  server:
+#    service:
+#      type: LoadBalancer
+
+server:
+  service:
+    type: LoadBalancer
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+      service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:your-cert-id # Replace with your ACM certificate ARN
+      service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "443"
+    ports:
+      - name: https
+        port: 443
+        targetPort: 8080

@@ -139,7 +139,7 @@ spec:
 #       protocol: TCP
 #       port: 80
 #       targetPort: 8080
-# ---
+---
 # apiVersion: v1
 # kind: ServiceAccount
 # metadata:
@@ -154,7 +154,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-healthcheck-path: /
     external-dns.alpha.kubernetes.io/hostname: dev.oluwaseunalade.com
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ca-central-1:050752609092:certificate/fcc65957-03d6-4e7e-905d-f5fe6358f255 # Replace with your ACM certificate ARN
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ca-central-1:050752609092:certificate/7386802e-4360-4596-bd31-9fe920e7facb # Replace with your ACM certificate ARN
     service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
 spec:
   type: LoadBalancer
