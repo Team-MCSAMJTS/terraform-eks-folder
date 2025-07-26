@@ -1,3 +1,4 @@
+/*
 output "certificate_arn" {
   value = aws_acm_certificate.cert.arn
 }
@@ -5,3 +6,19 @@ output "certificate_arn" {
 output "cert_domain" {
   value = aws_acm_certificate.cert.domain_name
 }
+# Another section
+
+output "certificate_arn" {
+  value = aws_acm_certificate.cert.arn
+}
+
+output "cert_domain" {
+  value = aws_acm_certificate.cert.domain_name
+}
+*/
+
+output "certificate_arn" {
+  description = "The ARN of the validated ACM certificate"
+  value       = aws_acm_certificate.cert.arn
+}
+

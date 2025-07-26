@@ -8,3 +8,13 @@ module "ssl_cert" {
     Owner       = "Oluwaseun"
   }
 }
+
+/*
+module "grpc_cert" {
+  source             = "../modules/ssl_cert_dns_record"
+  domain_name        = "grpc.oluwaseunalade.com"
+  hosted_zone_id     = "ZXXXXXXXXXXXXXX"
+  elb_name           = "my-elb-name"
+  use_https_listener = false
+}
+*/
