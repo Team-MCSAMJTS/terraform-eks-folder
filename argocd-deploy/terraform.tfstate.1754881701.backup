@@ -1,0 +1,212 @@
+{
+  "version": 4,
+  "terraform_version": "1.12.2",
+  "serial": 1,
+  "lineage": "3438e1d4-e898-3b1d-3f50-8c8767c20d2e",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster",
+      "name": "eks",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_config": [
+              {
+                "authentication_mode": "CONFIG_MAP",
+                "bootstrap_cluster_creator_admin_permissions": true
+              }
+            ],
+            "arn": "arn:aws:eks:ca-central-1:050752609092:cluster/tsp-cluster-dev",
+            "certificate_authority": [
+              {
+                "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJV2RQWUR1K2kzZlF3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBNE1URXdNREEyTlRGYUZ3MHpOVEE0TURrd01ERXhOVEZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUMwQjlDT1oxQlpMM1RSZ3Qvc3FrL2wrYlVNM25CWGxTTGNXMUhZaVFMWHhQZUJZeUJpak13NG10K2EKaTlDNHZndDI0eU1XeEdHRXRDRTdLVExBdnl2c2YrcFFNT3NDYlBxd0JFZTdmRVhVUkV0N2hzSW05UFpzcmh0MQpRYVZoS2hFVy9xckhvZ1ZyWlBQUzdFNzRhWFhyT1RGOUtLS2ovWnlKbWhVRjR5Nm9xdmk4a3hwalNPRHhaMkNoClFLRWMwMmUyTG91SjRKNE1IK2phM2RtQ2dRT3lwcCt4UEdKM3JhdDFvQ0F1aTJ6eWc4RVVnb3ArQlZiUVM0NzQKRzl1M01lYzB0WUN4ZGJ6bFNZZ2p2eTFIV0dvQ3hjanNBY2tiVlQxOGFRRk00S3hUTlBhSHlFYVRJbjkwQm5DbQprem1kVURHTUlMSm1QR0I1UWM2T05JOUh2Y1piQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRck1Bb3ZvSzNFYnRPYVdHdWQ2L2RacFBaSGFqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ3U1YkhrR0NLQwpYSTdramVkT0NNL1h0d2czbDFPa1RIRGVtclg4L3ByZmI4empqdFpUeC9wMGpjV0Vna0VlSjVhWC9DRytHYVNoCnNDWktZU3FyL1l1Y3hqa01zbDVLNWdpOVNDY1l6bzJtTWp4d1JrOEZhYlVPZ0pud3RsL0g3Y2FDOGpjRzc3UnMKenVsZ0hsTk8zWExPTU5mNnAxZklqOGxHN0lUL3IzamozVHZJR1FaTk1JYnhNOUdpOVFNeFhYaHJqSlhocHBNRApPZlgyNUpzVnp6SnhoeGQwLzAwbUs1UnZRUjRvWWVhaHUwMXF2MG9xSUszOHhDZ1FDLytheGhOOER6Y2RDYkJRCm5PK0xMdWxZanB6bEo2L1NwTE1QNjZldlJmUDhDZ01WQzZyRmVaY2pEVG1EejY1b2lQeHJBREJtemJtalUxblMKNzZQNm1CUGcvVTA0Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+              }
+            ],
+            "cluster_id": null,
+            "compute_config": [],
+            "created_at": "2025-08-11T00:07:04Z",
+            "enabled_cluster_log_types": [],
+            "endpoint": "https://145D7E3242D00207D75B4AF883ECE398.gr7.ca-central-1.eks.amazonaws.com",
+            "id": "tsp-cluster-dev",
+            "identity": [
+              {
+                "oidc": [
+                  {
+                    "issuer": "https://oidc.eks.ca-central-1.amazonaws.com/id/145D7E3242D00207D75B4AF883ECE398"
+                  }
+                ]
+              }
+            ],
+            "kubernetes_network_config": [
+              {
+                "elastic_load_balancing": [
+                  {
+                    "enabled": false
+                  }
+                ],
+                "ip_family": "ipv4",
+                "service_ipv4_cidr": "172.20.0.0/16",
+                "service_ipv6_cidr": ""
+              }
+            ],
+            "name": "tsp-cluster-dev",
+            "outpost_config": [],
+            "platform_version": "eks.9",
+            "region": "ca-central-1",
+            "remote_network_config": [],
+            "role_arn": "arn:aws:iam::050752609092:role/tsp-cluster-dev",
+            "status": "ACTIVE",
+            "storage_config": [],
+            "tags": {},
+            "upgrade_policy": [
+              {
+                "support_type": "EXTENDED"
+              }
+            ],
+            "version": "1.33",
+            "vpc_config": [
+              {
+                "cluster_security_group_id": "sg-087e3c05dc190436e",
+                "endpoint_private_access": false,
+                "endpoint_public_access": true,
+                "public_access_cidrs": [
+                  "0.0.0.0/0"
+                ],
+                "security_group_ids": [
+                  "sg-07c509002c223a68d"
+                ],
+                "subnet_ids": [
+                  "subnet-099794db91ea571fa",
+                  "subnet-0b7e3de66a1b7d7e7"
+                ],
+                "vpc_id": "vpc-038b31028bec2e1f0"
+              }
+            ],
+            "zonal_shift_config": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_eks_cluster_auth",
+      "name": "eks",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "tsp-cluster-dev",
+            "name": "tsp-cluster-dev",
+            "region": "ca-central-1",
+            "token": "k8s-aws-v1.aHR0cHM6Ly9zdHMuY2EtY2VudHJhbC0xLmFtYXpvbmF3cy5jb20vP0FjdGlvbj1HZXRDYWxsZXJJZGVudGl0eSZWZXJzaW9uPTIwMTEtMDYtMTUmWC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBUVhVSVhMTkNQR09IMlROTiUyRjIwMjUwODExJTJGY2EtY2VudHJhbC0xJTJGc3RzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA4MTFUMDAzNTMxWiZYLUFtei1FeHBpcmVzPTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JTNCeC1rOHMtYXdzLWlkJlgtQW16LVNpZ25hdHVyZT1jZmI0YTA0MjAzNGEyMTI3YjAwODhjNTNiZjM4OTkxM2NhOTllYjFjMDY3NTM5NGI5ZThjMWE3ZGMzYTVhMTIz"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "token"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "helm_release",
+      "name": "argocd",
+      "provider": "provider[\"registry.terraform.io/hashicorp/helm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "atomic": false,
+            "chart": "argo-cd",
+            "cleanup_on_fail": false,
+            "create_namespace": true,
+            "dependency_update": false,
+            "description": null,
+            "devel": null,
+            "disable_crd_hooks": false,
+            "disable_openapi_validation": false,
+            "disable_webhooks": false,
+            "force_update": false,
+            "id": "argocd",
+            "keyring": null,
+            "lint": false,
+            "manifest": null,
+            "max_history": 0,
+            "metadata": {
+              "app_version": "v2.8.4",
+              "chart": "argo-cd",
+              "first_deployed": 1754872535,
+              "last_deployed": 1754872535,
+              "name": "argocd",
+              "namespace": "argocd",
+              "notes": "\n\nIn order to access the server UI you have the following options:\n\n1. kubectl port-forward service/argocd-server -n argocd 8080:443\n\n    and then open the browser on http://localhost:8080 and accept the certificate\n\n2. enable ingress in the values file `server.ingress.enabled` and either\n      - Add the annotation for ssl passthrough: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#option-1-ssl-passthrough\n      - Set the `configs.params.\"server.insecure\"` in the values file and terminate SSL at your ingress: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#option-2-multiple-ingress-objects-and-hosts\n\n\nAfter reaching the UI the first time you can login with username: admin and the random password generated during the installation. You can find the password by running:\n\nkubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath=\"{.data.password}\" | base64 -d\n\n(You should delete the initial secret afterwards as suggested by the Getting Started Guide: https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)\n",
+              "revision": 1,
+              "values": "{\"server\":{\"service\":{\"type\":\"LoadBalancer\"}}}",
+              "version": "5.46.6"
+            },
+            "name": "argocd",
+            "namespace": "argocd",
+            "pass_credentials": false,
+            "postrender": null,
+            "recreate_pods": false,
+            "render_subchart_notes": true,
+            "replace": false,
+            "repository": "https://argoproj.github.io/argo-helm",
+            "repository_ca_file": null,
+            "repository_cert_file": null,
+            "repository_key_file": null,
+            "repository_password": null,
+            "repository_username": null,
+            "reset_values": false,
+            "reuse_values": false,
+            "set": null,
+            "set_list": null,
+            "set_sensitive": null,
+            "set_wo": null,
+            "set_wo_revision": null,
+            "skip_crds": false,
+            "status": "deployed",
+            "timeout": 900,
+            "values": [
+              " server:\n   service:\n     type: LoadBalancer"
+            ],
+            "verify": false,
+            "version": "5.46.6",
+            "wait": true,
+            "wait_for_jobs": false
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "repository_password"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "identity": {
+            "namespace": "argocd",
+            "release_name": "argocd"
+          },
+          "dependencies": [
+            "data.aws_eks_cluster.eks",
+            "data.aws_eks_cluster_auth.eks"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

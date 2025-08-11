@@ -1,0 +1,25 @@
+#create and run after argocd configuration and login#
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: terraform-eks-folder #name of the application#
+  namespace: argocd # must match where ArgoCD is installed
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Team-MCSAMJTS/terraform-eks-folder.git #replace with your repository URL
+    targetRevision: main
+    path: terraform-eks-folder/dev_k8s_manifest_microservices #replace with your application path
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:            # Optional: Enable auto-sync
+      prune: true         # Auto-remove resources not in Git
+      selfHeal: true      # Auto-correct drift
+    syncOptions:
+      - CreateNamespace=true
